@@ -1,6 +1,6 @@
-package com.learn.time.time.controllers;
+package com.learn.time.time.batch.importxmltodb.controllers;
 
-import com.learn.time.time.model.TestUser;
+import com.learn.time.time.batch.importxmltodb.model.TestUser;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 

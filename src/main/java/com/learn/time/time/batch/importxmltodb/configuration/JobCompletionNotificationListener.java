@@ -1,6 +1,6 @@
-package com.learn.time.time.batch;
+package com.learn.time.time.batch.importxmltodb.configuration;
 
-import com.learn.time.time.model.Coffee;
+import com.learn.time.time.batch.importxmltodb.model.Coffee;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.batch.core.BatchStatus;

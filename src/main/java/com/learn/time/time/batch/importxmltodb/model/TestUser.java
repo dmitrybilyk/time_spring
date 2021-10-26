@@ -1,4 +1,4 @@
-package com.learn.time.time.model;
+package com.learn.time.time.batch.importxmltodb.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

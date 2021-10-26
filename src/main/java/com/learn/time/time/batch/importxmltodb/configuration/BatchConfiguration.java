@@ -1,6 +1,6 @@
-package com.learn.time.time.batch;
+package com.learn.time.time.batch.importxmltodb.configuration;
 
-import com.learn.time.time.model.Coffee;
+import com.learn.time.time.batch.importxmltodb.model.Coffee;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
