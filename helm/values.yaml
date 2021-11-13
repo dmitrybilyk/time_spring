@@ -1,0 +1,6 @@
+replicaCount: 1
+
+image:
+  repository: 03564503d
+  tag: 	${dockerTag}
+  name: ${imageName}

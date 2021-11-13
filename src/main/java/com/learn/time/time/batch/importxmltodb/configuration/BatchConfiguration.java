@@ -41,7 +41,7 @@ public class BatchConfiguration {
 
     @Autowired
     public StepBuilderFactory stepBuilderFactory;
-    
+
     @Value("${file.input}")
     private String fileInput;
 
@@ -135,10 +135,10 @@ public class BatchConfiguration {
                 .reader(reader).processor(processor).writer(writer).allowStartIfComplete(true).build();
     }
 
-//    @Bean(name = "toXmlBatchJob")
-//    public Job job(@Qualifier("xmlStep") Step xmlStep) {
-//        return jobBuilderFactory.get("toXmlBatchJob").start(xmlStep).build();
-//    }
+    @Bean(name = "toXmlBatchJob")
+    public Job job(@Qualifier("xmlStep") Step xmlStep) {
+        return jobBuilderFactory.get("toXmlBatchJob").start(xmlStep).build();
+    }
 
     @Bean
     public CoffeeItemProcessor processor() {

@@ -1,6 +1,14 @@
+import java.time.LocalDateTime
+import java.time.format.DateTimeFormatter
+import java.util.regex.Matcher
+
 plugins {
 	id 'org.springframework.boot' version '2.5.5'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'com.google.cloud.tools.jib' version '3.1.4'
+	id 'org.unbroken-dome.helm' version "1.6.1" apply true
+	id 'org.unbroken-dome.helm-releases' version "1.6.1" apply true
+	id 'org.unbroken-dome.helm-publish' version "1.6.1" apply true
 	id 'java'
 //	id 'war'
 }
@@ -47,6 +55,60 @@ dependencies {
 	testImplementation 'org.springframework.batch:spring-batch-test'
 //	testImplementation 'org.springframework.security:spring-security-test'
 }
+
+
+jib {
+	from {
+		image = 'adoptopenjdk/openjdk11'
+//		auth {
+//			username = findProperty("username") ?: 'username'
+//			password = findProperty("password") ?: 'password'
+//		}
+	}
+	to {
+		image = "03564503d/time/${project.name}"
+		tags = ['latest', project.version]
+//		auth {
+//			username = findProperty("username") ?: 'username'
+//			password = findProperty("password") ?: 'password'
+//		}
+	}
+	container.mainClass = "com.learn.time.time.TimeApplication"
+	container.creationTime = "USE_CURRENT_TIMESTAMP"
+}
+
+helm {
+	charts {
+		create("time") {
+			chartName.set("time")
+			chartVersion.set("${project.version}")
+			sourceDir.set(file("helm"))
+			filtering {
+				values.put("dockerTag", project.version)
+				values.put("dockerRepository", "")
+				values.put("imageName", "03564503d/${project.name}")
+			}
+		}
+	}
+
+//	publishing {
+//		repositories {
+//			create<org.unbrokendome.gradle.plugins.helm.publishing.dsl.CustomHelmPublishingRepository>("jfrogArtifactory") {
+//				url.set(uri("http://artifactory.zoomint.com/"))
+//				uploadMethod.set("PUT")
+//				// We need to specify the file name in the url due to
+//				// inability of JFrog to figure out the file name from
+//				// the file which is being uploaded
+//				uploadPath.set("artifactory/helmcharts/wfo-analytics/${project.name}-${project.version}.tgz")
+//				credentials {
+//					username.set(System.getProperty("username"))
+//					password.set(System.getProperty("password"))
+//				}
+//			}
+//		}
+//	}
+}
+
 
 test {
 	useJUnitPlatform()

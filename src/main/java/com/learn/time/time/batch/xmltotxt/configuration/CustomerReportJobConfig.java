@@ -73,7 +73,7 @@ public class CustomerReportJobConfig {
         log.info("Exit status: {}", execution.getStatus());
     }
 
-    @Bean
+    @Bean(name = "customerReportJob")
     public Job customerReportJob() {
         return jobBuilders.get(JOB_NAME)
             .start(taskletStep())

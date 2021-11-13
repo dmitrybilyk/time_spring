@@ -15,6 +15,11 @@ import java.io.FileOutputStream;
 import java.util.*;
 
 @Slf4j
+//@SpringBootApplication(exclude = {
+//		DataSourceAutoConfiguration.class,
+//		DataSourceTransactionManagerAutoConfiguration.class,
+//		HibernateJpaAutoConfiguration.class
+//})
 @SpringBootApplication
 public class TimeApplication {
 

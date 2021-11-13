@@ -30,13 +30,13 @@ public class JobRunnerController {
         this.customerXmlJob = customerXmlJob;
     }
 
-    @RequestMapping(value = "startXmlDb")
+    @RequestMapping(value = "startDbJob")
     public Response startXmlDb() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
         jobLauncher.run(importJob, new JobParameters());
         return Response.ok("All is ok - !").build();
     }
 
-    @RequestMapping(value = "startXmlTxt")
+    @RequestMapping(value = "startXmlJob")
     public Response startXmlTxt() throws JobInstanceAlreadyCompleteException, JobExecutionAlreadyRunningException, JobParametersInvalidException, JobRestartException {
         jobLauncher.run(customerXmlJob, new JobParameters());
         return Response.ok("All is ok - !").build();
