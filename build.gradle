@@ -59,7 +59,14 @@ dependencies {
 
 jib {
 	from {
-		image = 'adoptopenjdk/openjdk11'
+//		image = 'adoptopenjdk/openjdk11'
+		from {
+			image = "artifactory.zoomint.com/eleveo/base-images/centos8java11:2.2.9"
+			auth {
+				username = "scopic.dbilyk"
+				password = "KAmEw2Xumu"
+			}
+		}
 //		auth {
 //			username = findProperty("username") ?: 'username'
 //			password = findProperty("password") ?: 'password'
@@ -75,6 +82,15 @@ jib {
 	}
 	container.mainClass = "com.learn.time.time.TimeApplication"
 	container.creationTime = "USE_CURRENT_TIMESTAMP"
+
+	extraDirectories {
+		paths {
+			path {
+				from = "src/main/jib/security"
+				into = "/etc/java/java-11-openjdk/java-11-openjdk-11.0.9.11-3.el8_3.x86_64/conf/security/"
+			}
+		}
+	}
 }
 
 helm {
