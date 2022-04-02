@@ -2,7 +2,10 @@ package com.learn.time.time.batch.importxmltodb.controllers;
 
 import com.learn.time.time.batch.importxmltodb.model.User;
 import com.learn.time.time.batch.importxmltodb.repositories.UserRepository;
+import lombok.Data;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.stereotype.Repository;
@@ -15,9 +18,16 @@ import org.springframework.web.bind.annotation.PostMapping;
 import javax.validation.Valid;
 import java.util.Collections;
 
+@Slf4j
 @Controller
+@Data
+@ConfigurationProperties("dmytro")
 public class UserController {
     private final UserRepository userRepository;
+
+    private String name;
+    private int age;
+    private boolean realMan;
 
     @Autowired
     public UserController(UserRepository userRepository) {
@@ -41,6 +51,7 @@ public class UserController {
 
     @GetMapping("/index")
     public String showUserList(Model model) {
+        log.info("name is - " + name);
 //        model.addAttribute("users", Collections.singletonList(new User()));
         model.addAttribute("users", userRepository.findAll());
         return "index";
