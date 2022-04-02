@@ -1,0 +1,2 @@
+#org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+#com.learn.time.time.autoconfiguration.MySQLAutoconfiguration
