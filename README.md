@@ -19,3 +19,25 @@ spring-data-flow
    export SKIPPER_VERSION=2.8.1
 3. docker-compose up
 
+
+--------------------
+to run with remote postgres wfo_core
+--------------------
+DATABASE_NAME:wfo_core
+DATABASE_HOST:10.17.2.32
+DATABASE_PORT:5432
+
+spring.datasource.url=jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}
+spring.datasource.username=wfo_user
+spring.datasource.password=wfo_pass
+
+flyway.url = jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}
+flyway.schemas = proc_schema
+flyway.user = wfo_user
+flyway.password = wfo_pass
+spring.flyway.baseline-on-migrate=true
+
+//	runtimeOnly("com.h2database:h2")
+runtimeOnly("org.postgresql:postgresql:42.3.3")
+implementation("org.flywaydb:flyway-core")
+//	runtimeOnly("mysql:mysql-connector-java:8.0.19")

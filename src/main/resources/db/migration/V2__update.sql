@@ -1,0 +1,1 @@
+update "testTable" set name = 888 where name is not null;
