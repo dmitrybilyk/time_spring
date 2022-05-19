@@ -7,6 +7,8 @@ public class MainSpring {
     public static void main(String[] args) {
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("my-config.xml");
         Student student = applicationContext.getBean(Student.class);
+        student.setName("new name");
+        Student student2 = applicationContext.getBean(Student.class);
         System.out.println(student.getName());
 
 
