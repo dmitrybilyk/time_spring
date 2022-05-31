@@ -29,11 +29,25 @@ public class Main {
 //        long ml = System.currentTimeMillis();
 //        LocalDateTime.ofEpochSecond(ml, 0, ZoneOffset.UTC);
 
-        LocalDateTime localDateTime = LocalDateTime.of(2015, Month.JANUARY, 25, 6, 30);
+//        LocalDateTime localDateTime = LocalDateTime.of(2015, Month.JANUARY, 25, 6, 30);
+//
+//        String result = localDateTime
+//                .format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
+//                        .withLocale(Locale.CANADA))
+//                ;
 
-        String result = localDateTime
-                .format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM)
-                        .withLocale(Locale.CANADA))
-                ;
+
+        final String label = "23 mai 2022 à 09:58:04".replace("à ", "");
+        final DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd MMM yyyy HH:mm:ss").withLocale(Locale.FRENCH);
+        final LocalDateTime dateTime = LocalDateTime.parse(label, formatter);
+//			SessionService sessionService = null; May 23, 2022, 9:52:38 AM
+//
+//        final Locale locale = getCommerceCommonI18NService().getCurrentLocale();
+//        if (Locale.ENGLISH.equals(locale)){
+//            labelText= dateTime.atZone(ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern("MM/dd/yyyy H
+//
+//        String s = "23 mai 2022 à 09:58:04";
+//        LocalDateTime labelText= dateTime.atZone(ZoneId.systemDefault()).format(DateTimeFormatter.ofPattern("dd.MM.yyyy a HH:mm:ss"));
+
     }
 }
