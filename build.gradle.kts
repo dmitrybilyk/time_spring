@@ -28,7 +28,7 @@ dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-aop")
 	implementation("org.springframework.boot:spring-boot-devtools")
 	implementation("org.springframework.data:spring-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-security")
+//	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.projectlombok:lombok")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	testImplementation("io.rest-assured:rest-assured")
