@@ -1,22 +1,37 @@
 package com.learn.bases.collections;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import com.learn.time.model.User;
+
+import java.util.*;
+import java.util.function.BinaryOperator;
 import java.util.function.Function;
 
 public class Main {
     public static void main(String[] args) {
-        List<String> list = Arrays.asList("two", "one", "al");
-        sortList(list);
-//        list.forEach();
-//        SomeClass someClass = new SomeClass("d");
-        MyFuncInterface funcInterface = param -> System.out.println(" value - " + param);
-        funcInterfaceUsage(funcInterface, "some value");
+//        List<String> list = Arrays.asList("two", "one", "al");
+//        Iterator it = list.iterator();
+//        sortList(list);
+////        list.forEach();
+////        SomeClass someClass = new SomeClass("d");
+//        MyFuncInterface funcInterface = param -> System.out.println(" value - " + param);
+//        funcInterfaceUsage(funcInterface, "some value");
+//
+//        Function<String, Long> function = Long::valueOf;
+//        useFunction(function);
 
-        Function<String, Long> function = Long::valueOf;
-        useFunction(function);
+//        List<Integer> numbers = Arrays.asList(1, 2, 3, 4, 5, 6);
+//        numbers.parallelStream().reduce(Integer::sum).ifPresent(System.out::println);
+
+
+//        List<User> users = Arrays.asList(new User("John", 30), new User("Julie", 35));
+//        int computedAges =
+//                users.stream().reduce(0, (partialAgeResult, user) -> partialAgeResult + user.getAge(), Integer::sum);
+        List<Integer> users = Arrays.asList(5, 3, 2, 4);
+        System.out.println(users.stream().reduce((first, second) -> second));
+
+//        List<User> users = Arrays.asList(new User("John", 30), new User("Julie", 35));
+//        int result6 = users.stream().reduce(0, (partialAgeResult, user) -> partialAgeResult + user.getAge(), Integer::sum);
+//        System.out.println(result6);
 
     }
 
