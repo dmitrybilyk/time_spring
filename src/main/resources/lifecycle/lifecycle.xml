@@ -6,14 +6,24 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans
         http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
         http://www.springframework.org/schema/aop
-        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+        http://www.springframework.org/schema/aop/spring-aop-4.2.xsd
+        http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd"
+default-autowire="byType">
 
-<!--    <context:annotation-config/>-->
+    <context:annotation-config/>
 <!--    <context:component-scan base-package="com.learn.time.spring.aspects.annotations"/>-->
 <!--    <aop:aspectj-autoproxy/>-->
 
     <bean id="student" class="com.learn.time.spring.lifecycle.Student" init-method="initStudent" destroy-method="destroyStudent">
-        <property name="name" value="StudentName"/>
+<!--        <property name="name" value="StudentName"/>-->
     </bean>
+
+    <bean id="book3" name="book3" class="com.learn.time.spring.lifecycle.Book">
+<!--        <property name="name" value="Some book"/>-->
+    </bean>
+
+<!--    <bean id="book2" class="com.learn.time.spring.lifecycle.Book">-->
+<!--        <property name="name" value="Some book2"/>-->
+<!--    </bean>-->
 
 </beans>

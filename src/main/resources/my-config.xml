@@ -7,13 +7,13 @@
 <!--    <context:annotation-config/>-->
 <!--    <context:component-scan base-package="com.learn.time.spring"/>-->
 
-    <bean name="studentName" class="com.learn.time.spring.Student">
-        <property name="name" value="my student"/>
-        <property name="book" ref="book"/>
-    </bean>
+<!--    <bean name="studentName" class="com.learn.time.spring.Student">-->
+<!--        <property name="name" value="my student"/>-->
+<!--        <property name="book" ref="book"/>-->
+<!--    </bean>-->
 
-    <bean id="book" class="com.learn.time.spring.Book">
-        <constructor-arg value="My good book"/>
-    </bean>
+<!--    <bean id="book" class="com.learn.time.spring.Book">-->
+<!--        <constructor-arg value="My good book"/>-->
+<!--    </bean>-->
 
 </beans>

@@ -1,11 +1,28 @@
 package com.learn.time.spring.lifecycle;
 
+import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 import org.jetbrains.annotations.NotNull;
 import org.springframework.beans.BeansException;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.config.BeanPostProcessor;
 
+
+@Data
+@Getter
+//@Setter
 public class Student implements BeanPostProcessor {
     private String name;
+
+//    @Autowired
+//    @Qualifier("book2")
+    private Book book2;
+
+//    public Student(Book book2) {
+//        this.book2 = book2;
+//    }
 
     @Override
     public Object postProcessBeforeInitialization(@NotNull Object bean, @NotNull String beanName) throws BeansException {
