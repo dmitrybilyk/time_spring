@@ -19,15 +19,39 @@ repositories {
 }
 
 dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-actuator")
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.springframework.boot:spring-boot-starter-jersey")
-	implementation("org.springframework.boot:spring-boot-starter-test")
+	implementation("org.springframework.boot:spring-boot-starter-actuator:2.6.7")
+//	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.6.7")
+	implementation("org.springframework.boot:spring-boot-starter-data-rest:2.6.7")
+	implementation("org.springframework.boot:spring-boot-starter-jersey:2.6.7")
+	implementation("org.springframework.boot:spring-boot-starter-test:2.6.7")
 	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
-	implementation("org.springframework.boot:spring-boot-starter-web")
-	implementation("org.springframework.boot:spring-boot-starter-aop")
+	implementation("org.springframework.boot:spring-boot-starter-web:2.6.7")
+	implementation("org.springframework.boot:spring-boot-starter-aop:2.6.7")
+	implementation("org.springframework.data:spring-data-rest-core:3.6.4")
+	implementation("org.springframework.data:spring-data-commons:2.6.4")
+	implementation("org.springframework:spring-webmvc:5.3.19")
+	implementation("org.springframework.hateoas:spring-hateoas:1.4.2")
+	implementation("org.springframework.data:spring-data-jpa:2.6.4")
+	implementation("jakarta.persistence:jakarta.persistence-api:2.2.3")
+	// https://mvnrepository.com/artifact/org.eclipse.persistence/org.eclipse.persistence.jpa
+//	implementation("org.eclipse.persistence:org.eclipse.persistence.jpa:2.7.4")
+	// https://mvnrepository.com/artifact/com.google.common/google-collect
+	// https://mvnrepository.com/artifact/com.google.guava/guava
+	implementation("com.google.guava:guava:30.1.1-jre")
+	implementation("org.postgresql:postgresql:")
+
+
+
+
+
+
+
+
+
+
+
 	implementation("org.springframework.boot:spring-boot-devtools")
-	implementation("org.springframework.data:spring-data-jpa")
+//	implementation("org.springframework.data:spring-data-jpa:2.6.7")
 //	implementation("org.springframework.boot:spring-boot-starter-security")
 	implementation("org.projectlombok:lombok")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")

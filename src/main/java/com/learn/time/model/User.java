@@ -11,15 +11,15 @@ import javax.validation.constraints.NotBlank;
 @Data
 @Entity
 public class User {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private int age;
-    
+
     @NotBlank(message = "Name is mandatory")
     private String name;
-    
+
     @NotBlank(message = "Email is mandatory")
     private String email;
 
