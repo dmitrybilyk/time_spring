@@ -36,6 +36,26 @@ dependencies {
 	runtimeOnly("com.h2database:h2")
 	runtimeOnly("mysql:mysql-connector-java:8.0.19")
 	annotationProcessor("org.projectlombok:lombok")
+
+	implementation("org.springframework.boot:spring-boot-starter-undertow")
+//	camel
+	implementation("org.apache.camel.springboot:camel-servlet-starter:3.17.0")
+	implementation("org.apache.camel.springboot:camel-jackson-starter:3.17.0")
+	implementation("org.apache.camel.springboot:camel-http-starter:3.17.0")
+	implementation("org.apache.camel.springboot:camel-jackson-starter:3.17.0")
+	implementation("org.apache.camel.springboot:camel-swagger-java-starter:3.17.0")
+	implementation("org.apache.camel.springboot:camel-spring-boot-starter:3.17.0")
+	implementation("org.apache.camel:camel-jaxb:3.17.0")
+	implementation("org.springframework.boot:spring-boot-starter-web")
+
+	implementation("com.zoomint.encourage:encourage-data-model:20.2.6-SNAPSHOT")
+	// https://mvnrepository.com/artifact/org.restlet.jee/org.restlet
+	implementation("org.restlet.jee:org.restlet:3.0-M1")
+// https://mvnrepository.com/artifact/org.springframework.hateoas/spring-hateoas
+	implementation("org.springframework.hateoas:spring-hateoas:1.5.1")
+// https://mvnrepository.com/artifact/org.springframework.data/spring-data-rest-core
+	implementation("org.springframework.data:spring-data-rest-core:3.6.4")
+
 }
 
 tasks.withType<Test>() {
