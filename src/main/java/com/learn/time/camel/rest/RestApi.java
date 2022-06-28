@@ -1,4 +1,4 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
 import org.apache.camel.CamelContext;
 import org.apache.camel.Exchange;

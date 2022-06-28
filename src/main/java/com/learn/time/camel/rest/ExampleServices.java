@@ -1,4 +1,4 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
 public class ExampleServices {
     public static void example(MyBean bodyIn) {

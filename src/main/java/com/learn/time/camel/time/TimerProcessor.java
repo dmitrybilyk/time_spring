@@ -1,5 +1,6 @@
-package com.learn.time.camel;
+package com.learn.time.camel.time;
 
+import com.learn.time.camel.time.Timer;
 import org.apache.camel.Exchange;
 import org.apache.camel.Processor;
 

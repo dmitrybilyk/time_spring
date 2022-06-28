@@ -1,4 +1,4 @@
-package com.learn.time.camel;
+package com.learn.time.camel.time;
 
 import com.fasterxml.jackson.annotation.JsonAutoDetect;
 

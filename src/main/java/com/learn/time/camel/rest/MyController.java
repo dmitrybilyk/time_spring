@@ -1,5 +1,6 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
+import com.learn.time.camel.time.Timer;
 import org.springframework.web.bind.annotation.*;
 
 import java.security.SecureRandom;

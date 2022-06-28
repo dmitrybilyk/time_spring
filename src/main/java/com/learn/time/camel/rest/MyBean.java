@@ -1,4 +1,4 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
 import lombok.Getter;
 import lombok.Setter;

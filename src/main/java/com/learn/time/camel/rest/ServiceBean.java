@@ -1,4 +1,4 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
 import com.learn.time.model.User;
 import org.springframework.stereotype.Component;

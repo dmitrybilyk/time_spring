@@ -1,8 +1,9 @@
-package com.learn.time.camel;
+package com.learn.time.camel.rest;
 
+import com.learn.time.camel.time.Timer;
+import com.learn.time.camel.time.TimerProcessor;
 import org.apache.camel.builder.RouteBuilder;
 import org.apache.camel.component.jackson.JacksonDataFormat;
-import org.springframework.stereotype.Component;
 
 
 //@Component
